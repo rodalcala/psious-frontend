@@ -1,3 +1,10 @@
-.App-container {
+.App-container-landing {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 30vh;
+  background: #23364A;
+  background: linear-gradient(0deg, rgba(236, 203, 241, 0.20) 0%, rgb(236, 203, 241) 100%);
 }
