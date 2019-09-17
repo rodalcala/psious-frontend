@@ -1,0 +1,51 @@
+.NameInput-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.NameInput-input {
+  width: 55vw;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  font-size: 2vh;
+  padding: 7px;
+  margin-bottom: 1vh;
+}
+
+.NameInput-input:focus {
+  outline: none;
+  box-shadow: 0 0 0.5vh rgba(18,21,25,1) inset;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: grey;
+  opacity: 1; /* Firefox */
+  text-align: center;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: grey;
+  text-align: center;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: grey;
+  text-align: center;
+}
+
+.NameInput-submit {
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 20vw;
+  background-color: whitesmoke;
+}
+
+.NameInput-submit:focus {
+  outline: none;
+}
+
+.NameInput-submit:hover {
+  background-color: white;
+}
