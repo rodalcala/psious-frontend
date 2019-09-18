@@ -17,7 +17,6 @@ const DataInput = (props) => {
     e.preventDefault();
     if (user) {
       props.setUser(user);
-      console.log(user)
       props.socket.emit('userSubmited', { user });
       setUser('');
     }

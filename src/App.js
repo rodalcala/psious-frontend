@@ -13,8 +13,8 @@ const App = (props) => {
   const isLanding = props.user ? false : true;
 
   useEffect(() => {
-    socket.on('itemsList', ({ usersItems }) => {
-      console.log('userSubmited', usersItems);
+    socket.on('updateList', ({ usersItems }) => {
+      console.log('updateList', usersItems);
     })
   }, []);
 
