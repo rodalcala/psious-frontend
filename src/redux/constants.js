@@ -1,3 +1,4 @@
 const SET_USER = 'SET_USER';
+const UPDATE_ITEMS_LIST = 'UPDATE_ITEMS_LIST';
 
-export { SET_USER };
+export { SET_USER, UPDATE_ITEMS_LIST };
