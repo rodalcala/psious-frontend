@@ -16,7 +16,7 @@
 
 .DataInput-input:focus {
   outline: none;
-  box-shadow: 0 0 0.5vh rgba(18,21,25,1) inset;
+  box-shadow: 0 0 0.5vh gray inset;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
