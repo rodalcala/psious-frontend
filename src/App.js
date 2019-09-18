@@ -4,19 +4,21 @@ import { connect } from 'react-redux';
 import DataInput from './components/DataInput';
 import ItemsList from './components/ItemsList';
 
+import actions from './redux/actions'
+
 import './App.css';
 
 import openSocket from 'socket.io-client';
 const socket = openSocket('http://localhost:4000/');
 
-const App = (props) => {
-  const isLanding = props.user ? false : true;
+const App = ({ user, updateItemsList }) => {
+  const isLanding = user ? false : true;
 
   useEffect(() => {
     socket.on('updateList', ({ usersItems }) => {
-      console.log('updateList', usersItems);
+      updateItemsList(usersItems);
     })
-  }, []);
+  }, [updateItemsList]);
 
   if (isLanding) {
     return (
@@ -38,4 +40,8 @@ const mapStateToProps = state => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  updateItemsList: (itemsList) => dispatch(actions.updateItemsList(itemsList)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
