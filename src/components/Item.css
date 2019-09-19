@@ -1,0 +1,10 @@
+.Item-container {
+  width: 80vw;
+  height: 7vh;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  font-size: 2vh;
+  padding: 7px;
+  margin-bottom: 2vh;
+}

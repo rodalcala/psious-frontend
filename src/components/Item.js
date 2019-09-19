@@ -8,7 +8,7 @@ const Item = (props) => {
 
   return (
     <div className="Item-container" >
-      Hola
+      {props.item.text}
     </div>
   );
 };

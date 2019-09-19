@@ -10,11 +10,11 @@ import actions from '../redux/actions'
 import './ItemsList.css';
 
 const ItemsList = (props) => {
-  const renderItems = () => props.items.map(item => <Item item={item}/>)
+  const renderItems = () => props.items.map(item => <Item item={ item }/>)
 
   return (
     <div className="ItemsList-container" >
-      {renderItems()}
+      { props.items.length ? renderItems() : null }
     </div>
   );
 };
