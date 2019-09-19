@@ -1,4 +1,4 @@
-import { SET_USER, UPDATE_ITEMS_LIST } from './constants';
+import { SET_USER, UPDATE_ITEMS_LIST, SUBMIT_ITEM } from './constants';
 
 const setUser = (user) => ({
   type: SET_USER,
@@ -10,7 +10,17 @@ const updateItemsList = (itemsList) => ({
   itemsList,
 });
 
+const submitItem = ({ user, text, priority }) => ({
+  type: SUBMIT_ITEM,
+  apiPackage: {
+    parameters: `post/${user}`,
+    method: 'POST',
+    body: { text, priority }
+  }
+});
+
 export default {
   setUser,
   updateItemsList,
+  submitItem,
 };
