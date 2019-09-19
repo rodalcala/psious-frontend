@@ -15,7 +15,7 @@ const submitItem = ({ user, text, priority }) => ({
   apiPackage: {
     parameters: `post/${user}`,
     method: 'POST',
-    body: { text, priority }
+    body: JSON.stringify({ text, priority })
   }
 });
 

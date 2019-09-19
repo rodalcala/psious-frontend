@@ -4,7 +4,7 @@ const apiMiddleware = store => next => action => {
   
   const { headers, body, method, url, parameters } = action.apiPackage;
   const { type } = action;
-  const baseUrl = url || 'http://localhost:4000/';
+  const baseUrl = url || 'http://localhost:4000';
   const defaultHeaders = { 'Accept': 'application/json', 'Content-Type': 'application/json' };
 
   next({

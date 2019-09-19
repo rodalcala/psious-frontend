@@ -10,7 +10,7 @@ import actions from '../redux/actions'
 import './ItemsList.css';
 
 const ItemsList = (props) => {
-  const renderItems = () => props.items.map(item => <Item item={ item }/>)
+  const renderItems = () => props.items.map(item => <Item key={item._id} item={ item }/>)
 
   return (
     <div className="ItemsList-container" >
