@@ -11,14 +11,15 @@ import './App.css';
 import openSocket from 'socket.io-client';
 const socket = openSocket('http://localhost:4000/');
 
-const App = ({ user, updateItemsList }) => {
+const App = ({ user, updateItemsList, setSocket }) => {
   const isLanding = user ? false : true;
 
   useEffect(() => {
     socket.on('updateList', ({ usersItems }) => {
       updateItemsList(usersItems);
-    })
-  }, [updateItemsList]);
+    });
+    setSocket(socket);
+  }, [updateItemsList, setSocket]);
 
   if (isLanding) {
     return (
@@ -42,6 +43,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   updateItemsList: (itemsList) => dispatch(actions.updateItemsList(itemsList)),
+  setSocket: (socket) => dispatch(actions.setSocket(socket)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -7,6 +7,8 @@ const apiMiddleware = store => next => action => {
   const baseUrl = url || 'http://localhost:4000';
   const defaultHeaders = { 'Accept': 'application/json', 'Content-Type': 'application/json' };
 
+  const { user, socket } = store.getState();
+
   next({
     type: `${type}_PENDING`,
   });
@@ -21,6 +23,7 @@ const apiMiddleware = store => next => action => {
   })
   .then(res => res.json())
   .then(response => {
+    socket.emit('updateRequired', { user });
     store.dispatch({
       type: `${type}_SUCCESS`,
       response
