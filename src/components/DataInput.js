@@ -30,7 +30,6 @@ const DataInput = (props) => {
         text: input,
         priority: 2,
       });
-      props.socket.emit('itemSubmitted', { user: props.user });
       setInput('');
     }
   }
