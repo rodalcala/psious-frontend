@@ -22,6 +22,7 @@ const ItemsList = (props) => {
 const mapStateToProps = state => ({
   user: state.user,
   items: state.items,
+  socket: state.socket,
 });
 
 const mapDispatchToProps = dispatch => ({

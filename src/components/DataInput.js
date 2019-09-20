@@ -62,6 +62,7 @@ const DataInput = (props) => {
 
 const mapStateToProps = state => ({
   user: state.user,
+  socket: state.socket,
 });
 
 const mapDispatchToProps = dispatch => ({

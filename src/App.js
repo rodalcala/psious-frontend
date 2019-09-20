@@ -24,14 +24,14 @@ const App = ({ user, updateItemsList, setSocket }) => {
   if (isLanding) {
     return (
       <div className="App-container-landing">
-        <DataInput socket={socket} isLanding={isLanding} />
+        <DataInput isLanding={isLanding} />
       </div>
     );
   } else {
     return (
       <div className="App-container-main">
-        <DataInput socket={socket} isLanding={isLanding} />
-        <ItemsList socket={socket} />
+        <DataInput isLanding={isLanding} />
+        <ItemsList />
       </div>
     )
   }
