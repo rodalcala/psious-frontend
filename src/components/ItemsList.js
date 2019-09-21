@@ -10,11 +10,18 @@ import actions from '../redux/actions'
 import './ItemsList.css';
 
 const ItemsList = (props) => {
-  const renderItems = () => props.items.map(item => <Item key={item._id} item={ item }/>)
+  const renderItems = () => props.items.map(item => !item.completed &&
+    <Item
+      key={item._id}
+      item={ item }
+      completeItem={ props.completeItem }
+      deleteItem={ props.deleteItem }
+    />
+  )
 
   return (
     <div className="ItemsList-container" >
-      { props.items.length ? renderItems() : null }
+      { renderItems() }
     </div>
   );
 };
@@ -27,6 +34,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setUser: (user) => dispatch(actions.setUser(user)),
+  completeItem: (itemId) => dispatch(actions.completeItem(itemId)),
+  deleteItem: (itemId) => dispatch(actions.deleteItem(itemId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemsList);

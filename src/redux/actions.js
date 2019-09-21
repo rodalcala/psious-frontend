@@ -1,4 +1,10 @@
-import { SET_USER, UPDATE_ITEMS_LIST, SUBMIT_ITEM, SET_SOCKET } from './constants';
+import {
+  SET_USER,
+  UPDATE_ITEMS_LIST,
+  SUBMIT_ITEM, SET_SOCKET,
+  COMPLETE_ITEM,
+  DELETE_ITEM
+} from './constants';
 
 const setUser = (user) => ({
   type: SET_USER,
@@ -7,7 +13,7 @@ const setUser = (user) => ({
 
 const setSocket = (socket) => ({
   type: SET_SOCKET,
-  socket
+  socket,
 });
 
 const updateItemsList = (itemsList) => ({
@@ -24,9 +30,27 @@ const submitItem = ({ user, text }) => ({
   }
 });
 
+const completeItem = (itemId) => ({
+  type: COMPLETE_ITEM,
+  apiPackage: {
+    parameters: `complete/${itemId}`,
+    method: 'PUT',
+  },
+});
+
+const deleteItem = (itemId) => ({
+  type: DELETE_ITEM,
+  apiPackage: {
+    parameters: `delete/${itemId}`,
+    method: 'DELETE',
+  },
+});
+
 export default {
   setUser,
   setSocket,
   updateItemsList,
   submitItem,
+  completeItem,
+  deleteItem,
 };
