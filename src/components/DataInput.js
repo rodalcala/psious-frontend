@@ -28,7 +28,6 @@ const DataInput = (props) => {
       props.submitItem({
         user: props.user,
         text: input,
-        priority: 2,
       });
       setInput('');
     }
@@ -44,6 +43,7 @@ const DataInput = (props) => {
       onSubmit={ props.isLanding ? handleNameSubmit : handleItemSubmit }
     >
       <input
+        autoFocus
         type="text"
         className="DataInput-input"
         placeholder={ placeholder }

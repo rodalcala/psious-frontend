@@ -15,12 +15,12 @@ const updateItemsList = (itemsList) => ({
   itemsList,
 });
 
-const submitItem = ({ user, text, priority }) => ({
+const submitItem = ({ user, text }) => ({
   type: SUBMIT_ITEM,
   apiPackage: {
     parameters: `post/${user}`,
     method: 'POST',
-    body: JSON.stringify({ text, priority })
+    body: JSON.stringify({ text })
   }
 });
 
