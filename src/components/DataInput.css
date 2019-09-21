@@ -1,7 +1,7 @@
 .DataInput-container {
   display: flex;
   height: 16px;
-  width: 85vw;
+  width: 100%;
 }
 
 .DataInput-input {

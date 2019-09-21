@@ -1,12 +1,18 @@
+#root {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #23364A;
+  background: linear-gradient(0deg, rgba(236, 203, 241, 0.20) 0%, rgb(236, 203, 241) 100%);
+}
+
 .App-container-landing {
   text-align: center;
   display: flex;
   justify-content: center;
-  height: 78vh;
-  width: 100vw;
+  width: 90vw;
   padding-top: 22vh;
-  background: #23364A;
-  background: linear-gradient(0deg, rgba(236, 203, 241, 0.20) 0%, rgb(236, 203, 241) 100%);
 }
 
 .App-container-main {
@@ -14,9 +20,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 88vh;
-  width: 100vw;
+  width: 90vw;
   padding-top: 12vh;
-  background: #23364A;
-  background: linear-gradient(0deg, rgba(236, 203, 241, 0.20) 0%, rgb(236, 203, 241) 100%);
 }
