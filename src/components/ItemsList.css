@@ -1,5 +1,11 @@
 .ItemsList-container {
-  padding-top: 10vh;
-  height: 70vh;
+  margin-top: 10vh;
+  height: 68vh;
   width: 100%;
+  overflow: scroll;
+  overflow: -moz-scrollbars-none; /* Firefox */
+}
+
+.ItemsList-container::-webkit-scrollbar {
+  width: 0 !important; /* Chrome, Opera, Safari */
 }
