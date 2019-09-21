@@ -1,3 +1,5 @@
+/* Middleware that catches every API request and handle them */
+
 const apiMiddleware = store => next => action => {
   
   if (!action.apiPackage) return next(action);
@@ -23,6 +25,7 @@ const apiMiddleware = store => next => action => {
   })
   .then(res => res.json())
   .then(response => {
+    /* NOTE: On every succesful call to the API, we request an update on the user's list thru socket.io */
     socket.emit('updateRequired', { user });
     store.dispatch({
       type: `${type}_SUCCESS`,

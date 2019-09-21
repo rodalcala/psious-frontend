@@ -1,4 +1,4 @@
-/* Re-usable component handling data input. Will recieve isLanding in thru props. */
+/* Re-usable component handling data input. Will recieve isLanding thru props. */
 
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
