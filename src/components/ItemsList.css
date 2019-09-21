@@ -1,11 +1,24 @@
 .ItemsList-container {
   margin-top: 10vh;
-  height: 68vh;
+  height: 72vh;
   width: 100%;
-  overflow: scroll;
-  overflow: -moz-scrollbars-none; /* Firefox */
+  display: flex;
+  flex-direction: column;
 }
 
-.ItemsList-container::-webkit-scrollbar {
+.ItemsList-itemsContainer {
+  overflow: scroll;
+  overflow: -moz-scrollbars-none; /* Firefox */
+  margin-bottom: 3vh;
+}
+
+.ItemsList-itemsContainer::-webkit-scrollbar {
   width: 0 !important; /* Chrome, Opera, Safari */
+}
+
+.ItemsList-togleItemsContainer {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 7px 14px;
 }
