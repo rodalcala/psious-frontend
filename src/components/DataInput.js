@@ -10,9 +10,6 @@ import './DataInput.css';
 const DataInput = (props) => {
   const [input, setInput] = useState('')
 
-  const buttonValue = props.isLanding ? '>' : '+';
-  const placeholder = props.isLanding ? 'How do your friends call you?' : 'Add a new item to the list';
-
   const handleNameSubmit = (e) => {
     e.preventDefault();
     if (input) {
@@ -33,6 +30,11 @@ const DataInput = (props) => {
     }
   }
 
+  /* NOTE: Values to be displayed depending on whether the component is in the landing page or not  */
+  const buttonValue = props.isLanding ? '>' : '+';
+  const placeholder = props.isLanding ? 'How do your friends call you?' : 'Add a new item to the list';
+  const onSubmit = props.isLanding ? handleNameSubmit : handleItemSubmit;
+
   const handleInputChange = (e) => {
     setInput(e.target.value)
   }
@@ -40,7 +42,7 @@ const DataInput = (props) => {
   return (
     <form
       className="DataInput-container"
-      onSubmit={ props.isLanding ? handleNameSubmit : handleItemSubmit }
+      onSubmit={ onSubmit }
     >
       <input
         autoFocus
