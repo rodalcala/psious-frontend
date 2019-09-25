@@ -54,7 +54,8 @@
   border-right: 2px solid rgb(41, 5, 125);
   border-left: 1px solid rgb(41, 5, 125);
   padding: 7px;
-  background-color: rgb(182, 129, 218);
+  background-color: rgb(108, 102, 161);
+  color:rgb(41, 5, 125);
   font-size: 20px;
   text-align: center;
   vertical-align: middle;
@@ -66,7 +67,18 @@
 }
 
 .DataInput-submit:hover {
-  background-color: rgb(118, 75, 159);
-  border-left: rgb(118, 75, 159);
+  background-color: rgb(172, 139, 203);
   cursor: pointer;
+}
+
+@media screen and (max-width:400px ) {
+  .DataInput-submit {
+    width: 10vw;
+  }
+}
+
+@media screen and (min-width:400px ) {
+  .DataInput-submit {
+    width: 40px;
+  }
 }

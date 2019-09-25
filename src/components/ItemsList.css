@@ -19,9 +19,9 @@
 }
 
 .ItemsList-togleItemsContainer {
-  background: transparent;
-  color:  rgb(108, 102, 161);
-  border: 2px solid transparent;
+  background: rgb(108, 102, 161);
+  color:  white;
+  border: 2px solid rgb(108, 102, 161);
   border-radius: 30px;
   padding: 7px 14px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -29,11 +29,10 @@
 
 .ItemsList-togleItemsContainer:focus{
   outline: none;
-  background-color: transparent;
 }
 
 .ItemsList-togleItemsContainer:hover {
-  background-color: transparent;
-  color: rgb(135, 102, 164);
+  background-color: rgb(108, 102, 161);
+  color: rgb(230, 214, 245);
   cursor: pointer;
 }
