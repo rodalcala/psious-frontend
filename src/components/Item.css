@@ -1,24 +1,42 @@
 .Item-container {
-  height: 7vh;
+  height: 6vh;
   background: transparent;
-  color: black;
-  border: 2px solid black;
+  color:rgb(102, 15, 95);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  border: 2px solid rgb(118, 75, 159);
+  border-width: 2px;
   padding: 7px 14px;
   margin-bottom: 2vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 30px;
 }
 
 .Item-checkbox {
-  color: rgb(0, 150, 0);
+  color: rgb(145, 10, 163);
+}
+
+.Item-checkbox:hover {
+  color: rgb(179, 98, 189);
 }
 
 .Item-delete {
-  color: rgb(200, 0, 0);
+  color: rgb(63, 7, 116);
+}
+
+.Item-delete:hover {
+  color: rgb(106, 69, 140);
 }
 
 .Item-text {
   width: 70%;
   font-size: 3vh;
+}
+
+@media screen and (max-width: 700px){
+  .Item-text{
+    font-size: 18px;
+  }
 }

@@ -23,3 +23,17 @@
   width: 90vw;
   padding-top: 12vh;
 }
+
+@media screen and (max-width: 700px){
+  .App-container-landing,
+  .App-container-main {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 700px){
+  .App-container-main,
+  .App-container-landing {
+    width: 490px;
+  }
+}

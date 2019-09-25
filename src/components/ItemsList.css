@@ -4,9 +4,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .ItemsList-itemsContainer {
+  width: 100%;
   overflow: scroll;
   overflow: -moz-scrollbars-none; /* Firefox */
   margin-bottom: 3vh;
@@ -18,7 +20,20 @@
 
 .ItemsList-togleItemsContainer {
   background: transparent;
-  color: black;
-  border: 2px solid black;
+  color:  rgb(108, 102, 161);
+  border: 2px solid transparent;
+  border-radius: 30px;
   padding: 7px 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ItemsList-togleItemsContainer:focus{
+  outline: none;
+  background-color: transparent;
+}
+
+.ItemsList-togleItemsContainer:hover {
+  background-color: transparent;
+  color: rgb(135, 102, 164);
+  cursor: pointer;
 }
