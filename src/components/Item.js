@@ -9,7 +9,11 @@ const Item = (props) => {
 
   return (
     <div className="Item-container" >
-      <DoneOutline className="Item-checkbox" onClick={() => props.completeItem(props.item._id) } style={{ fontSize: 30 }} />
+      {
+        props.item.completed ?
+        <div style={{ width: 30, height: 30}} /> :
+        <DoneOutline className="Item-checkbox" onClick={() => props.completeItem(props.item._id) } style={{ fontSize: 30 }} />
+      }
       <p className="Item-text" >{props.item.text}</p>
       <DeleteOutline className="Item-delete" onClick={() => props.deleteItem(props.item._id) } style={{ fontSize: 30 }} />
     </div>
